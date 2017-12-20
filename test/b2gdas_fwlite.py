@@ -375,10 +375,10 @@ def b2gdas_fwlite(argv):
     if options.isData:
         DataJECs = DataJEC(jet_energy_corrections)
     else:
-        jecAK4 = createJEC('JECs/80X_mcRun2_asymptotic_2016_TrancheIV_v8', ['L1FastJet', 'L2Relative', 'L3Absolute'], 'AK4PFchs')
-        jecAK8 = createJEC('JECs/80X_mcRun2_asymptotic_2016_TrancheIV_v8', ['L1FastJet', 'L2Relative', 'L3Absolute'], 'AK8PFchs')
-        jecUncAK4 = ROOT.JetCorrectionUncertainty(ROOT.std.string('JECs/80X_mcRun2_asymptotic_2016_TrancheIV_v8_Uncertainty_AK4PFchs.txt'))
-        jecUncAK8 = ROOT.JetCorrectionUncertainty(ROOT.std.string('JECs/80X_mcRun2_asymptotic_2016_TrancheIV_v8_Uncertainty_AK8PFchs.txt'))
+        jecAK4 = createJEC('JECs/80X_mcRun2_asymptotic_2016_miniAODv2', ['L1FastJet', 'L2Relative', 'L3Absolute'], 'AK4PFchs')
+        jecAK8 = createJEC('JECs/80X_mcRun2_asymptotic_2016_miniAODv2', ['L1FastJet', 'L2Relative', 'L3Absolute'], 'AK8PFchs')
+        jecUncAK4 = ROOT.JetCorrectionUncertainty(ROOT.std.string('JECs/80X_mcRun2_asymptotic_2016_miniAODv2_Uncertainty_AK4PFchs.txt'))
+        jecUncAK8 = ROOT.JetCorrectionUncertainty(ROOT.std.string('JECs/80X_mcRun2_asymptotic_2016_miniAODv2_Uncertainty_AK8PFchs.txt'))
 
 
     selectElectron = VIDElectronSelector(mvaEleID_Spring15_25ns_nonTrig_V1_wp80)
